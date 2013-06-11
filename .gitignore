@@ -1,3 +1,7 @@
+# Temporary files
+*.swp
+
+# Python file (non-code)
 *.py[cod]
 
 # C extensions
