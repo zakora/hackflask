@@ -1,6 +1,9 @@
 # Temporary files
 *.swp
 
+# My secrets
+appconfig.py
+
 # Python file (non-code)
 *.py[cod]
 
