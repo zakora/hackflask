@@ -46,7 +46,7 @@ def print_db():
     for row in db_cursor.fetchall():
         str_row = [str(item) for item in row]
         entries.append('\t'.join(str_row))
-    return '\n'.join(entries)
+    return '<br>\n'.join(entries)
 
 
 # Handlers
