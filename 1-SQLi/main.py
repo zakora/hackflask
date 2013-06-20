@@ -8,7 +8,6 @@ app = Flask(__name__)
 
 # Configuration
 DATABASE = 'prism.db'
-SECRET_KEY = 'HURRYUPHIDETHEFACTS'
 app.config.from_object(__name__)
 
 
