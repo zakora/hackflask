@@ -14,24 +14,25 @@ app.config.from_object(__name__)
 # Web routes
 @app.route('/', methods=['POST', 'GET'])  # read: url '/' triggers hello()
 def hello():
-    if request.method == 'POST':
-        unsafe_name = request.form['name']
-        unsafe_secret = request.form['secret']
-        g.db.execute('insert into prism_secrets (name, secret)' + \
-                     'values ("' + unsafe_name + '", "' + unsafe_secret + '")')
-        g.db.commit()
-        return redirect(url_for('hello'))
-    else:
-        form = """
+    form = """
 <!doctype html>
 <title>SQLi</title>
-<form action="/" method=post>
+<form action="/insight" method=post>
     name: <input type=text name=name><br />
-    secret: <input type=text name=secret><br />
     <input type=submit>
 </form>
         """
-        return form
+    return form
+
+
+@app.route('/insight', methods=['POST'])
+def show_entries():
+    unsafe_name = request.form['name']
+    query = 'select name from prism_secrets where name="%s"' % unsafe_name
+    db_cursor = g.db.execute(query)
+    res_html = '<br>\n'.join([row[0] for row in db_cursor.fetchall()])
+    res_html += '<br>\n<a href="/">go home</a>'
+    return res_html
 
 
 @app.route('/debug')
