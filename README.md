@@ -24,5 +24,11 @@ Contributing
 Any bug fixes, requests, ideas are welcome.
 
 
+
+License
+-------
+MIT License, see file LICENSE.
+
+
 [0]: (http://flask.pocoo.org/)
 [1]: (https://pypi.python.org/pypi/virtualenv)

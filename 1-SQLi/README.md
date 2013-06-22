@@ -32,7 +32,3 @@ Getting set up
 -   Run `python main.py` to launch the local web server.
 
 -   Go on [http://localhost:5000]() to hack yourself.
-
-License
--------
-MIT License, see file LICENSE.
