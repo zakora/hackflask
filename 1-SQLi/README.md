@@ -16,7 +16,7 @@ On the main page, you can enter a name to see if it is in the database.
 
 ### Help ###
 
-To have a view of the database, go visit `/see`.
+To have a view of the database, go visit [http://localhost:5000/see]().
 
 
 Getting set up
