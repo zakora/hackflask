@@ -12,7 +12,7 @@ app.config.from_object(__name__)
 
 
 # Web routes
-@app.route('/', methods=['POST', 'GET'])  # read: url '/' triggers hello()
+@app.route('/')  # read: url '/' triggers hello()
 def hello():
     form = """
 <!doctype html>
