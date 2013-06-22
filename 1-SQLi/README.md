@@ -16,7 +16,7 @@ On the main page, you can enter a name to see if it is in the database.
 
 ### Help ###
 
-To have a view of the database, go visit [http://localhost:5000/see]().
+To have a view of the database, go visit [http://localhost:5000/see](http://localhost:5000/see).
 
 
 Getting set up
@@ -31,4 +31,4 @@ Getting set up
 
 -   Run `python main.py` to launch the local web server.
 
--   Go on [http://localhost:5000]() to hack yourself.
+-   Go on [http://localhost:5000](http://localhost:5000/see) to hack yourself.
